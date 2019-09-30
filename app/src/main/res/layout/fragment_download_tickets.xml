@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/download_ticket_title"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="3"
+            android:src="@drawable/ticket"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btn_download_ticket"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:padding="24dp"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp"
+            android:text="@string/fragment_download_button_tickets"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_total_tickets_downloaded"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/pb_main_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_download_ticket"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/tv_total_tickets_downloaded_lbl_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/download_ticket_total_lbl_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_total_tickets_downloaded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/tv_total_tickets_downloaded_lbl_1"
+                app:layout_constraintStart_toEndOf="@+id/tv_total_tickets_downloaded_lbl_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_total_tickets_downloaded_lbl_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/tv_total_tickets_downloaded"
+                android:text="@string/download_ticket_total_lbl_2"
+                app:layout_constraintStart_toEndOf="@+id/tv_total_tickets_downloaded"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_total_tickets_deleted_lbl_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/deleted_ticket_total_lbl_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_tickets_downloaded_lbl_1" />
+
+            <TextView
+                android:id="@+id/tv_total_tickets_deleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tv_total_tickets_deleted_lbl_1"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_total_tickets_deleted_lbl_1"
+                app:layout_constraintStart_toStartOf="@+id/tv_total_tickets_downloaded"
+                app:layout_constraintTop_toTopOf="@+id/tv_total_tickets_deleted_lbl_1" />
+
+            <TextView
+                android:id="@+id/tv_total_tickets_deleted_lbl_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/tv_total_tickets_deleted"
+                android:text="@string/deleted_ticket_total_lbl_2"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_total_tickets_deleted"
+                app:layout_constraintStart_toEndOf="@+id/tv_total_tickets_deleted"
+                app:layout_constraintTop_toTopOf="@+id/tv_total_tickets_deleted" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_main_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:indeterminate="true"
+            android:progressTint="@color/colorAccent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

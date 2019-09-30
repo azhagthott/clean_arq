@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <ImageButton
+                    android:id="@+id/ib_back"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@color/background_transparent"
+                    android:src="@drawable/ic_arrow_back_black" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/background_snaspe_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:text="Descripción de los colores"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_green"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"
+                android:maxLines="10"
+                android:minLines="1"
+                android:text="Entrada es valida, se guardará en la base de datos local y se informará posteriormente"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view_green"
+                app:layout_constraintTop_toTopOf="@+id/view_green" />
+
+            <View
+                android:id="@+id/view_green"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/light_green_A700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/tv_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:maxLines="10"
+                android:minLines="1"
+                android:text="Entrada es valida, pero no existe en la base de datos local, se guardará en la base de datos local y se informará posteriormente"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_green"
+                app:layout_constraintTop_toTopOf="@+id/view_blue" />
+
+            <View
+                android:id="@+id/view_blue"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/blue_A700"
+                app:layout_constraintStart_toStartOf="@+id/view_green"
+                app:layout_constraintTop_toBottomOf="@+id/view_green" />
+
+
+            <TextView
+                android:id="@+id/tv_purple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:maxLines="10"
+                android:minLines="1"
+                android:text="Entrada es valida, pero no corresponde la fecha, se guardará en la base de datos local y se informará posteriormente"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_blue"
+                app:layout_constraintTop_toTopOf="@+id/view_purple" />
+
+            <View
+                android:id="@+id/view_purple"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/purple_A700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_blue" />
+
+            <TextView
+                android:id="@+id/tv_grey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:maxLines="10"
+                android:minLines="1"
+                android:text="Entrada es valida, pero no corresponde al parque, se guardará en la base de datos local y se informará posteriormente"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_purple"
+                app:layout_constraintTop_toTopOf="@+id/view_grey" />
+
+            <View
+                android:id="@+id/view_grey"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/gray_500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_purple" />
+
+            <TextView
+                android:id="@+id/tv_red"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:maxLines="10"
+                android:minLines="1"
+                android:text="Entrada no valido, los datos no serán guardados en la base de datos local"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_grey"
+                app:layout_constraintTop_toTopOf="@+id/view_red" />
+
+            <View
+                android:id="@+id/view_red"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/red_A700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_grey" />
+
+            <TextView
+                android:id="@+id/tv_yellow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:maxLines="10"
+                android:minLines="1"
+                android:text="Entrada valida, escaneada anteriormente"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_yellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_red"
+                app:layout_constraintTop_toTopOf="@+id/view_yellow" />
+
+            <View
+                android:id="@+id/view_yellow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/yellow_A700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_red" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

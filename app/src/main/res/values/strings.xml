@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">SNASPE</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Navigation menu -->
+    <string name="bm_download">Descargar</string>
+    <string name="bm_scan">Escanear</string>
+    <string name="bm_send_info">Envíar</string>
+    <string name="title_activity_park_selector">ParkSelectorActivity</string>
+
+
+    <!-- UI Home -->
+    <string name="home_title">Datos locales</string>
+    <string name="home_ultima_actualizacion">Ultima actualizacion de datos locales: </string>
+    <string name="home_ultima_actualizacion_dummy">2107/06/16 - 11:11</string>
+    <string name="home_seleccionar_ubicaion">Seleccione su ubicación:</string>
+
+    <!-- UI Fragment select location -->
+    <string name="park_list_title">Lista de parques</string>
+    <string name="park_list_connection_warning">Para actualizar la lista de parques primero debe conectarse a Internet</string>
+    <string name="lbl_select_park">Seleccione el parque con que desea trabajar</string>
+    <string name="service_list_title">Lista de servicios</string>
+    <string name="lbl_select_service">Seleccione el servicio con que desea trabajar</string>
+    <string name="control_list_title">Lista de controles</string>
+    <string name="lbl_select_control">Seleccione el punto de control con que desea trabajar</string>
+
+
+    <!-- UI Fragment qr scanner -->
+    <string name="qr_scanner_title">Seleccione el punto de control con que desea trabajar</string>
+
+    <!-- UI Scanner Fragment -->
+    <string name="scanner_qr_title">Seleccione tipo de escaner</string>
+    <string name="scanner_qr_entrance">Escanear entradas</string>
+    <string name="scanner_qr_exits">Escanear salidas</string>
+    <string name="scanner_qr_reservations">Escanear reservas</string>
+
+
+    <!-- UI Fragment descarga de informacion -->
+    <string name="download_ticket_title">Descarga de información</string>
+    <string name="download_ticket_total_lbl_1">Se descargaron:\u0020</string>
+    <string name="download_ticket_total_lbl_2">\u0020Tickets</string>
+
+    <string name="deleted_ticket_total_lbl_1">Se borraron:\u0020</string>
+    <string name="deleted_ticket_total_lbl_2">\u0020Tickets</string>
+
+    <string name="fragment_download_button_parques">Descarga parques</string>
+    <string name="fragment_download_button_tickets">Descarga tickets</string>
+
+
+    <string name="home_descarga_tickets">Descargando tickets</string>
+    <string name="home_tickets_descargados">Tickets descargados</string>
+
+
+    <string name="lbl_park_name">Nombre parque:</string>
+    <string name="lbl_visitor_name">Nombre:</string>
+    <string name="lbl_visitor_passport">RUT/Pasaporte:</string>
+    <string name="lbl_entry_date">Fecha ingreso:</string>
+    <string name="lbl_exit_date">Fecha salida:</string>
+    <string name="lbl_ticket_type">Tipo entrada:</string>
+
+
+    <!-- UI Fragment Envio de informacion-->
+    <string name="fragment_send_info_title">Envío de información</string>
+    <string name="fragment_send_info_entry">Entradas escaneadas:</string>
+    <string name="fragment_send_info_reservations">Reservas escaneadas:</string>
+    <string name="fragment_send_info_exit">Salidas escaneadas:</string>
+    <string name="fragment_send_info_button">Enviar</string>
+
+    <!-- UI user location -->
+    <string name="current_location">Actualmente está trabajando en:</string>
+    <string name="current_location_park">Parque:</string>
+    <string name="current_location_service">Servicio:</string>
+    <string name="current_location_control">Control:</string>
+
+    <string name="change_location">Cambiar ubicación</string>
+    <string name="current_version">Version:</string>
+
+
+    <string name="inresos_visitante_folio">Folio:</string>
+
+    <string name="dialog_title">Confirme los datos</string>
+    <string name="dialog_button_ok">Continuar</string>
+
+    <string name="alert_dialog_tickets">Enviando información</string>
+    <string name="title_activity_check_permission">CheckPermissionActivity</string>
+    <string name="title_activity_current_location">Cambiar ubicación</string>
+
+    <string name="title_activity_camera">Escaner QR</string>
+
+</resources>

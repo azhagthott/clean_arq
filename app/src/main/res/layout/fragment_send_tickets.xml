@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/fragment_send_info_title"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_send_entry_tickets_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/fragment_send_info_entry"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_1" />
+
+        <TextView
+            android:id="@+id/tv_send_entry_tickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_send_entry_tickets_lbl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_send_entry_tickets_lbl"
+            app:layout_constraintTop_toTopOf="@+id/tv_send_entry_tickets_lbl" />
+
+        <TextView
+            android:id="@+id/tv_send_tickets_reservations_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/fragment_send_info_reservations"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_send_entry_tickets_lbl" />
+
+        <TextView
+            android:id="@+id/tv_send_tickets_reservations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_send_tickets_reservations_lbl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_send_entry_tickets"
+            app:layout_constraintTop_toTopOf="@+id/tv_send_tickets_reservations_lbl" />
+
+
+        <TextView
+            android:id="@+id/tv_send_tickets_exit_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/fragment_send_info_exit"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_send_tickets_reservations_lbl" />
+
+        <TextView
+            android:id="@+id/tv_send_tickets_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_send_tickets_exit_lbl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_send_tickets_reservations"
+            app:layout_constraintTop_toTopOf="@+id/tv_send_tickets_exit_lbl" />
+
+        <View
+            android:id="@+id/view_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_send_tickets_exit_lbl" />
+
+        <Button
+            android:id="@+id/btn_send_ticket"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="24dp"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp"
+            android:text="@string/fragment_send_info_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

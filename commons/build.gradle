@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+apply plugin: 'realm-android'
+
+android {
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode rootProject.version_code
+        versionName rootProject.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    dataBinding { enabled true }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled = true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "URL_BASE", URL_BASE_RELEASE
+            buildConfigField "String", "URL_KEY", API_KEY
+        }
+
+        demo {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "URL_BASE", URL_BASE_DEMO
+            buildConfigField "String", "URL_KEY", API_KEY
+            debuggable true
+            minifyEnabled = true
+            multiDexEnabled true
+        }
+
+        debug {
+            buildConfigField "String", "URL_BASE", URL_BASE_DEBUG
+            buildConfigField "String", "URL_KEY", API_KEY
+            debuggable true
+            minifyEnabled = true
+            multiDexEnabled true
+        }
+
+        dev {
+            buildConfigField "String", "URL_BASE", URL_BASE_DEV
+            buildConfigField "String", "URL_KEY", API_KEY
+            debuggable true
+            minifyEnabled = false
+            multiDexEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':core')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //Dagger
+    implementation "com.google.dagger:dagger:$rootProject.dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit_version"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
